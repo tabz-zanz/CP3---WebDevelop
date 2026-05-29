@@ -1,0 +1,422 @@
+/* =============================================
+   GAMELIST — CSS
+   Tema: Dark Gaming — simples e direto
+   ============================================= */
+
+/* ---------- RESET ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background-color: #0f1117;
+  color: #e0e0e0;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.oculto {
+  display: none !important;
+}
+
+/* ---------- MENSAGEM DE ERRO ---------- */
+.mensagem-erro {
+  background-color: #2a0a0a;
+  border: 1px solid #cc3333;
+  border-left: 4px solid #cc3333;
+  color: #ff6666;
+  font-size: 0.9rem;
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+/* =============================================
+   TELA DE LOGIN
+   ============================================= */
+#tela-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  background-color: #0f1117;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background-color: #1a1d27;
+  border: 1px solid #2e3248;
+  border-top: 3px solid #00c8ff;
+  border-radius: 8px;
+  padding: 40px 32px;
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.pixel-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-logo h1 {
+  font-family: monospace;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  color: #e0e0e0;
+}
+
+.login-logo h1 span {
+  color: #00c8ff;
+}
+
+.tagline {
+  font-size: 0.8rem;
+  color: #666e99;
+  margin-top: 6px;
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.75rem;
+  color: #00c8ff;
+  margin-bottom: 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.campo input {
+  width: 100%;
+  background-color: #12151f;
+  border: 1px solid #2e3248;
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-family: monospace;
+  font-size: 0.95rem;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus {
+  border-color: #00c8ff;
+}
+
+.campo input::placeholder {
+  color: #444c6e;
+}
+
+#btn-login {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  background-color: #00c8ff;
+  color: #0f1117;
+  border: none;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#btn-login:hover {
+  background-color: #33d6ff;
+}
+
+/* =============================================
+   TELA DA LISTA
+   ============================================= */
+#tela-lista {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0f1117;
+}
+
+/* --- HEADER --- */
+header {
+  background-color: #1a1d27;
+  border-bottom: 1px solid #2e3248;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-family: monospace;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-logo strong {
+  color: #00c8ff;
+}
+
+#btn-logout {
+  background-color: transparent;
+  border: 1px solid #2e3248;
+  color: #666e99;
+  font-family: monospace;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#btn-logout:hover {
+  color: #ff5577;
+  border-color: #ff5577;
+}
+
+/* --- MAIN --- */
+main {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 24px 60px;
+  flex: 1;
+}
+
+.section-title {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #44dd88;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+}
+
+#contador-badge {
+  background-color: #00c8ff;
+  color: #0f1117;
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+/* --- PAINEL ADICIONAR --- */
+.painel-adicionar {
+  background-color: #1a1d27;
+  border: 1px solid #2e3248;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.add-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.add-row input {
+  flex: 1;
+  min-width: 180px;
+  background-color: #12151f;
+  border: 1px solid #2e3248;
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-family: monospace;
+  font-size: 0.95rem;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.add-row input:focus {
+  border-color: #44dd88;
+}
+
+.add-row input::placeholder {
+  color: #444c6e;
+}
+
+.add-row button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.add-row button:hover {
+  opacity: 0.85;
+}
+
+#btn-add-fim {
+  background-color: #44dd88;
+  color: #0f1117;
+}
+
+#btn-add-inicio {
+  background-color: #ffcc00;
+  color: #0f1117;
+}
+
+/* --- LISTA DE JOGOS --- */
+.painel-lista {
+  background-color: #1a1d27;
+  border: 1px solid #2e3248;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+#lista-jogos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item-jogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #12151f;
+  border: 1px solid #2e3248;
+  border-radius: 4px;
+  padding: 12px 14px;
+  transition: border-color 0.2s;
+}
+
+.item-jogo:nth-child(even) {
+  background-color: #141720;
+}
+
+.item-jogo:hover {
+  border-color: #3a4060;
+}
+
+.item-rank {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #444c6e;
+  min-width: 26px;
+  text-align: center;
+}
+
+.item-nome {
+  flex: 1;
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  word-break: break-word;
+}
+
+/* --- MODO EDIÇÃO --- */
+.item-jogo.editando .item-nome           { display: none; }
+.item-jogo.editando .item-input-edicao   { display: block; }
+.item-jogo.editando .btn-editar,
+.item-jogo.editando .btn-remover         { display: none; }
+.item-jogo.editando .btn-confirmar,
+.item-jogo.editando .btn-cancelar        { display: inline-flex; }
+
+.item-input-edicao {
+  display: none;
+  flex: 1;
+  background-color: #0f1117;
+  border: 1px solid #00c8ff;
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-family: monospace;
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  outline: none;
+}
+
+/* --- BOTÕES DO ITEM --- */
+.item-acoes {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.btn-item {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s;
+}
+
+.btn-item:hover {
+  opacity: 0.75;
+}
+
+.btn-editar    { background-color: #1a3a4a; color: #00c8ff; }
+.btn-remover   { background-color: #3a1a22; color: #ff5577; }
+.btn-confirmar { background-color: #1a3a26; color: #44dd88; display: none; }
+.btn-cancelar  { background-color: #3a330a; color: #ffcc00; display: none; }
+
+/* --- LISTA VAZIA --- */
+.lista-vazia {
+  text-align: center;
+  padding: 40px 0;
+  color: #444c6e;
+}
+
+.lista-vazia .icon-vazio {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.lista-vazia p {
+  font-family: monospace;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 480px) {
+  .login-card         { padding: 28px 20px; }
+  .login-logo h1      { font-size: 1.1rem; }
+  main                { padding: 20px 16px 48px; }
+  .painel-adicionar,
+  .painel-lista       { padding: 18px 14px; }
+  .add-row button     { padding: 10px 10px; }
+}
